@@ -45,19 +45,19 @@ The following dependencies are required to run the project:
 - UserInfo
 
 ## Table of Contents
-  @Id
-    private Long id;
-    private String firstName;
-    private String lastName;
-    private String street;
-    private String address;
-    private String city;
-    private String state;
-    private String email;
-    private String password;
-    private String phone;
-    private String role;
-    
+        @Id
+        private Long id;
+        private String firstName;
+        private String lastName;
+        private String street;
+        private String address;
+        private String city;
+        private String state;
+        private String email;
+        private String password;
+        private String phone;
+        private String role;
+        
 - role: User role (e.g., USER, ADMIN).
   
 >## Description
