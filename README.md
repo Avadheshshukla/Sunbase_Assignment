@@ -24,6 +24,8 @@
 * Thymeleaf
 * Hibernate
 * Bootstrap
+
+* 
 ## Dependencies
 The following dependencies are required to run the project:
 
@@ -54,12 +56,8 @@ The following dependencies are required to run the project:
         private String role;
         
 - role: User role (e.g., USER, ADMIN).
-  
->## Description
-The Customer Management  project aims to create a robust and user-friendly application, providing individuals with a versatile and engaging platform for only Admin 
-can add User.
 
->## API endPoint
+## API endPoint
 >http://localhost:8080/api/login
 
 >http://localhost:8080/api/welcome
