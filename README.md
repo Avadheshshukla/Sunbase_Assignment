@@ -45,16 +45,19 @@ The following dependencies are required to run the project:
 - UserInfo
 
 ## Table of Contents
-- id: Unique identifier for each user.
-- firstName: First name of the user.
-- lastName: Last name of the user.
-- street: Street name.
-- address: Full address of the user.
-- city: City where the user resides.
-- state: State where the user resides.
-- email: Email address of the user.
-- password: User's password.
-- phone: Phone number of the user.
+  @Id
+    private Long id;
+    private String firstName;
+    private String lastName;
+    private String street;
+    private String address;
+    private String city;
+    private String state;
+    private String email;
+    private String password;
+    private String phone;
+    private String role;
+    
 - role: User role (e.g., USER, ADMIN).
   
 >## Description
