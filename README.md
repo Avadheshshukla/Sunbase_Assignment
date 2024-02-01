@@ -12,11 +12,6 @@
 </p>  
 
    <!-- Project Description -->
-## Overview
-  <p align="center">🔸This is simple recipe management system built using Spring Boot framework. The idea was to build  a simple recipe management to perform basic CRUD operations        with some validations 
-  and also auhentication.. 
-   </p>
-
    ## Overview
   <p align="center">🔸Cutomer Management System API is a backend project that aims to provide a robust and scalable platform for users to create and manage Tasks, update on tasks, delte the tasks, and authorize user and Adming can control all Task Management System. The platform is designed to offer a seamless user experience and allow tasks to showcase their writing skills and engage with a wider audience. 
    </p>
