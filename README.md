@@ -1,12 +1,27 @@
-<h1 align="center"> Customer Management System</h1>
+# <h1 align = "center"> Customer Management System </h1>
+<p align="center">
+<a href="Java url">
+    <img alt="Java" src="https://img.shields.io/badge/Java->=8-darkblue.svg" />
+</a>
+<a href="Maven url" >
+    <img alt="Maven" src="https://img.shields.io/badge/maven-3.1.3-brightgreen.svg" />
+</a>
+<a href="Spring Boot url" >
+    <img alt="Spring Boot" src="https://img.shields.io/badge/Spring Boot-3.0.6-brightgreen.svg" />
+</a>
+</p>  
 
->### Prerequisites
-* ![MySql](https://img.shields.io/badge/DBMS-MYSQL%205.7%20or%20Higher-red)
- * ![SpringBoot](https://img.shields.io/badge/Framework-SpringBoot-green)
+   <!-- Project Description -->
+## Overview
+  <p align="center">🔸This is simple recipe management system built using Spring Boot framework. The idea was to build  a simple recipe management to perform basic CRUD operations        with some validations 
+  and also auhentication.. 
+   </p>
 
-
-* ![Java](https://img.shields.io/badge/Language-Java%208%20or%20higher-yellow)
->### Technologies Used
+   ## Overview
+  <p align="center">🔸Cutomer Management System API is a backend project that aims to provide a robust and scalable platform for users to create and manage Tasks, update on tasks, delte the tasks, and authorize user and Adming can control all Task Management System. The platform is designed to offer a seamless user experience and allow tasks to showcase their writing skills and engage with a wider audience. 
+   </p>
+   
+### Technologies Used
 * java
 * Spring Boot
 * HTML
@@ -51,8 +66,14 @@ can add User.
 
 >http://localhost:8080/api/welcome
 
-## Author
+ <!-- Acknowledgments -->
+## Acknowledgments
+- Thank you to the Spring Boot and Java communities for providing excellent tools and resources.
 
-👤 **Anurag Shukla**
+<!-- Contact -->
+## Contact📲
+For questions or feedback, please contact : Avadhesh Shukla👍
+- Maild Id 📧: avadheshsukla1636@gmail.com
 
-* GitHub: [Anurag Shukla](https://github.com/Anurag-Shukla0206)
+<h1 align="center">Thank You💖...<h1>
+<h3 align = "center"> ***********************************************************<h3>
