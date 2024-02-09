@@ -16,17 +16,18 @@ th:replace="~{ base :: layout(~{::title} , ~{::section}) }">
 <!--        <div class="row"  >-->
             <div class="col-md-10 offset-md-1">
                 <div class="card">
-                    <div class="card-header text-center fs-4">Customer Details</div>
+                    <div class="card-header text-center fs-4 ">Customer Details!!</div>
                     <th:block th:if="${session.msg}">
-                        <p class="text-center text-success fs-4" th:text="${session.msg}"></p>
+                        <p class="text-center text-success fs-4 fw-bold text-primary" th:text="${session.msg}"></p>
                         <th:block th:text="${@userInfoService.removeSessionMessage()}"></th:block>
                     </th:block>
 
                     <form th:action="@{/api/search}" method="get">
-                        <div class="mb-3">
+                        </center> <div class="mb-3">
                             <label for="search" class="form-label text-white">Search:</label>
                             <input type="text" class="form-control form-control-sm" id="search" name="search" placeholder="Enter first name, city, email, or phone">
                         </div>
+                        </center>
                         <button type="submit" class="btn btn-primary btn-lg">Search</button>
                     </form>
                     <div class="text-center mt-3">

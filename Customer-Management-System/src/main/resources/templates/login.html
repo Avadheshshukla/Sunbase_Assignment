@@ -3,26 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
   <title>User Login</title>
 <!--  <link rel="stylesheet" href="styles.css">-->
   <style>
 
 body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: green;
-      background-color: #212121;
-    }
+  font-family: 'Pacifico', cursive;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #FF6347, #FF69B4, #FFFF00);
+}
 
-    .container {
-      width: 400px;
-      margin: 50px auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+.container {
+  width: 400px;
+  margin: 50px auto;
+  background: linear-gradient(to right, #32CD32, #FFD700);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 
     h2 {
       text-align: center;
@@ -125,36 +127,86 @@ body {
 <!-- Add a container to display user information -->
 <div id="userInfoContainer"></div>
 
+<!--<script>-->
+<!--    function loginForm(event) {-->
+<!--        event.preventDefault();-->
+
+<!--        const credentials = {-->
+<!--            email: document.getElementById('email').value,-->
+<!--            password: document.getElementById('password').value-->
+<!--        };-->
+
+
+<!--        fetch('/api/logIn', {-->
+<!--            method: 'POST',-->
+<!--            headers: {-->
+<!--                'Content-Type': 'application/json',-->
+<!--            },-->
+<!--            body: JSON.stringify(credentials),-->
+<!--        })-->
+<!--        .then(response => {-->
+<!--            if (!response.ok) {-->
+<!--                throw new Error("Login failed");-->
+<!--            }-->
+<!--            return response.json();-->
+<!--        })-->
+<!--        .then(data => handleLogin(data))-->
+<!--        .catch(error => {-->
+<!--            console.error('Error:', error);-->
+<!--            // Display error message to the user-->
+<!--            document.getElementById('errorMessage').innerText = 'Login failed. Please check your credentials.';-->
+<!--        });-->
+<!--    }-->
+<!--</script>-->
+
+
 <script>
-    function loginForm(event) {
-        event.preventDefault();
+  function loginForm(event) {
+      event.preventDefault();
 
-        const credentials = {
-            email: document.getElementById('email').value,
-            password: document.getElementById('password').value
-        };
+      const emailInput = document.getElementById('email');
+      const passwordInput = document.getElementById('password');
+      const errorMessage = document.getElementById('errorMessage');
 
-        fetch('/api/logIn', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(credentials),
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Login failed");
-            }
-            return response.json();
-        })
-        .then(data => handleLogin(data))
-        .catch(error => {
-            console.error('Error:', error);
-            // Display error message to the user
-            document.getElementById('errorMessage').innerText = 'Login failed. Please check your credentials.';
-        });
-    }
+      const credentials = {
+          email: emailInput.value,
+          password: passwordInput.value
+      };
+
+      // Clear previous error message
+      errorMessage.innerText = '';
+
+      fetch('/api/logIn', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(credentials),
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error("Login failed");
+          }
+          return response.json();
+      })
+      .then(data => handleLogin(data))
+      .catch(error => {
+          console.error('Error:', error);
+          // Display error message to the user
+          errorMessage.innerText = 'Login failed. Please check your credentials.';
+
+          // Add a shake animation to the form inputs for visual feedback
+          emailInput.classList.add('animate__animated', 'animate__shakeX');
+          passwordInput.classList.add('animate__animated', 'animate__shakeX');
+          // Remove the shake animation after a delay
+          setTimeout(() => {
+              emailInput.classList.remove('animate__animated', 'animate__shakeX');
+              passwordInput.classList.remove('animate__animated', 'animate__shakeX');
+          }, 1000);
+      });
+  }
 </script>
+
 
 </body>
 </html>

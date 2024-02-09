@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class UserInfoService {
@@ -32,6 +33,18 @@ public class UserInfoService {
         userInfo.setPassword(new BCryptPasswordEncoder().encode(userInfo.getPassword()));
 //        userInfo.setRole("USER");
         userInfoRepository.save(userInfo);
+
+//        if (userInfo.getId() == null || userInfo.getId().isEmpty()) {
+//
+//            userInfo.setId(UUID.randomUUID().toString());
+//
+//            System.out.println(UUID.randomUUID().toString());
+//            userInfoRepository.save(userInfo);
+//        }else {
+//            System.out.println(userInfo.getId());
+//            userInfoRepository.save(userInfo);
+//        }
+//        return userInfo.getFirstName() + " Added Successfully!!!";
     }
 
     public List<UserInfo> getAllUserInfo() {
@@ -92,13 +105,6 @@ public class UserInfoService {
         return false;
     }
 
-//    public void removeSessionMessage() {
-//        HttpSession session = ((ServletRequestAttributes) (RequestContextHolder.getRequestAttributes())).getRequest()
-//                .getSession();
-//
-//        session.removeAttribute("msg");
-//
-//    }
 
     public String removeSessionMessage() {
         // Clear the session message after displaying
